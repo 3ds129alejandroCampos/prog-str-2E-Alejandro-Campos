@@ -66,7 +66,7 @@ public static void calcularIMC(Scanner leer){
 
         double IMC = peso / (estatura * estatura);
 
-        System.out.println(comprobarImc(IMC)+": "+IMC);
+        System.out.printf(comprobarImc(IMC)+": %.1f\n",IMC);
 
 }
 //metodo para calcular el area de un rectangulo (b*h)
