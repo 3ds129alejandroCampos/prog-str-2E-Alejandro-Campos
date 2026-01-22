@@ -54,7 +54,7 @@ System.out.println("r:"+s);
 //1.-nombres de variables no Descriptibles
 //2.-sin identacion
 //3.-lineas juntas/combinadas
-//4.-todo junto en una funcion
+//4.-dependencia a main
 //5.no tener una "comprobacion" para cuando el numero del usuario sea negativo
 //6.-nunca haber cerrado el Scanner leer o utilizar el try en el
 //7.-personalmente el no declarar las variables al principio de las funciones
