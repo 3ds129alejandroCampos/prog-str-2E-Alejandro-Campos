@@ -14,12 +14,12 @@ void main() {
 
     leer.nextLine();
 
-    System.out.println("¿Eres estudiante? true/false");
-    estudiante= leer.nextLine();
 
 
 
-    if(edad>=0&&edad<=120) {
+    if(edad>=0&&edad<120) {
+        System.out.println("¿Eres estudiante? true/false");
+        estudiante= leer.nextLine();
         esEstudiante=asignacionFalsoVerdadero(estudiante);
         tarifa=evaluar(edad,leer,esEstudiante);
         System.out.println("Edad: "+edad);
