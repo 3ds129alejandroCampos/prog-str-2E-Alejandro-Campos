@@ -13,6 +13,8 @@ public class ActividadSwitchCalculadora {
         System.out.println("Dame el valor 2");
         variableB=leer.nextDouble();
 
+        System.out.println("main");
+
         System.out.println("Menu");
         System.out.println("1-Sumar");
         System.out.println("2-Restar");
