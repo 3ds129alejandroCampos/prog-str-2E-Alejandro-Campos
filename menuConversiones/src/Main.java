@@ -29,7 +29,7 @@ void main() {
                 }
                 case 2->{valor=obtenerValor(scanner,"dame los °f a convertir");
                     resultado=farenACentrigrados(valor);
-                    System.out.printf("°f: %.2f",resultado);
+                    System.out.printf("°c: %.2f",resultado);
                     conversionACenti++;
                 }
                 case 3->{valor=obtenerValor(scanner,"dame los km a convertir");
@@ -84,7 +84,7 @@ public static double kmAMillas(double km){
     return millas;
 }
 public static double millasAKM(double millas){
-    double km= millas*1.6;
+    double km= millas*1.60934;
     return km;
 }
 
