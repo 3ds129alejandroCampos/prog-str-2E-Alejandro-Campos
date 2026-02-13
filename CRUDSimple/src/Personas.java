@@ -5,10 +5,6 @@ public class Personas {
     private int id;
     private boolean isActive;
 
-    public Personas(){
-
-    }
-
     @Override
     public String toString() {
         return "Personas{" +
@@ -18,10 +14,10 @@ public class Personas {
                 '}';
     }
 
-    public Personas(String name, int id, boolean isActive) {
+    public Personas(String name, int id) {
         this.name = name;
         this.id = id;
-        this.isActive = isActive;
+        this.isActive = true;
     }
     public int aumentarIndice(){
         return indice++;
