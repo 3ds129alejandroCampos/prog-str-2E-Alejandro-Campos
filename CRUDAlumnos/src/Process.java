@@ -44,13 +44,21 @@ public class Process {
             System.out.println("Promedio: " + a1.getPromedio());
             System.out.println("--------");
         }
+        else{
+            System.out.println("ID no encontrado");
+        }
     }
     private  void updateAverage(Scanner sc,Validator validator,Alumnos[] alumnos){
        Alumnos a1 =sercherStudent(alumnos,sc,"Dame el id a para actualizar");
-        System.out.println("Calificacion anterior: "+a1.getPromedio());
-       double average= validator.average(sc,"Calificacion actualizada:");
 
-       a1.setPromedio(average);
+       if(a1!=null){
+           System.out.println("Calificacion anterior: " + a1.getPromedio());
+           double average = validator.average(sc, "Calificacion actualizada:");
+           a1.setPromedio(average);
+       }
+       else {
+           System.out.println("ID no encontrado");
+       }
 
     }
     private Alumnos sercherStudent(Alumnos[] alumnos,Scanner sc,String msg){
@@ -65,11 +73,8 @@ public class Process {
                     if(a1!=null&&id==a1.getId()&&a1.isActivo()){
                         return a1;
                     }
-                    else {
-                        System.out.println("id no encontrado");
-                        return null;
-                    }
                 }
+                return null;
             } catch (NumberFormatException e) {
                 System.out.println("no puede haber id con digitos no numericos");
             }
@@ -91,7 +96,7 @@ public class Process {
                 System.out.println("id: "+a.getId());
                 System.out.println("nombre: "+a.getName());
                 System.out.println("promedio: "+a.getPromedio());
-            }else {
+            }if(a==null) {
                 break;
             }
         }
