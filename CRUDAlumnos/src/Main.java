@@ -1,12 +1,14 @@
 import java.util.Scanner;
+
 void main() {
     String opc;
-
 
     Process process=new Process();
     Alumnos[] alumnos=new Alumnos[25];
     Validator validator=new Validator();
     Scanner sc=new Scanner(System.in);
+
+
 
     do {
         System.out.println("-----Menu-----");
