@@ -41,9 +41,11 @@ public class Validator {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("welcome-view.fxml"));
                 Parent root = fxmlLoader.load();
-                javafx.stage.Stage stage = (javafx.stage.Stage) txtCorreo.getScene().getWindow();
-                Scene scene = new Scene(root, 600, 600);
-                stage.setTitle("Bienvenido");
+                BienvenidoCTRL controlBienvenida = fxmlLoader.getController();
+                controlBienvenida.establecerMSG(correo);
+                Stage stage = (Stage) txtCorreo.getScene().getWindow();
+                Scene scene = new Scene(root, 600, 500);
+                stage.setTitle("Holaaa :)");
                 stage.setScene(scene);
                 stage.show();
             }catch (Exception e){

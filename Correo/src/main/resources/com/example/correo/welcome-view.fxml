@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="600.0">
-        <Label text="Bienvenidooooo" style="-fx-font-size: 20px;" layoutX="250" layoutY="300"/>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.correo.BienvenidoCTRL" prefHeight="400.0" prefWidth="600.0">
+        <Label fx:id="mensaje" text="" style="-fx-font-size: 20px;" layoutX="250" layoutY="300"/>
 
 </AnchorPane>
