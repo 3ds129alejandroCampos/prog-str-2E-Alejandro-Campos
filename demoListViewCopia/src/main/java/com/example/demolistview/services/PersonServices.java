@@ -20,9 +20,40 @@ public class PersonServices {
             String name = parts[0];
             String email = parts[1];
             String edad = parts[2];
-            result.add("nombre: " + name + " - " + email + "-"+"Edad: "+edad);
+            result.add( name + " - " + email + " - "+edad);
         }
         return result;
+    }
+
+    private List<String> getCleanLines()throws  IOException{
+        List<String> lines= repo.readAllLines();
+        List<String> cleanLines= new ArrayList<>();
+        for(String line:lines){
+            if(line!=null&&!line.isBlank()){
+                cleanLines.add(line);
+            }
+        }
+        return cleanLines;
+
+    }
+    public void removePerson(int index)throws IOException{
+        if(index<0){
+            throw new IllegalArgumentException("indice invalido");
+        }
+        List<String> data = getCleanLines();
+        data.remove(index);
+        repo.saveFile(data);
+
+    }
+    public void updatePerson(int index,String name,String correo,String edad) throws IOException{
+        validate(name,correo,edad);
+        if(index<0){
+            throw new IllegalArgumentException("indice invalido");
+        }
+        List<String> data = getCleanLines();
+
+        data.set(index,name+","+correo+","+edad);
+        repo.saveFile(data);
     }
 
     public void addPerson(String name,String email,String edad) throws IOException{
